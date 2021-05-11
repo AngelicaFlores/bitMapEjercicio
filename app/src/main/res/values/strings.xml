@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Manejo de Imágenes Ejemplo 3</string>
+    <string name="app_name">Manejo de Imágenes Ejercicio</string>
     <string name="action_settings">Settings</string>
     <string name="buttonDrawBitmapText">Cargar Bitmap</string>
     <string name="itemMenuLoadBitmapTitle">Cargar Bitmap</string>

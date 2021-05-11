@@ -9,9 +9,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-
+    Random rand;
     Button buttonDrawBitmap;
     ImageView imageViewBitmap;
 
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        rand =  new Random();
         this.buttonDrawBitmap = findViewById(R.id.buttonDrawBitmap);
         this.imageViewBitmap = this.findViewById(R.id.imageViewBitmap);
         this.buttonDrawBitmap.setOnClickListener(new View.OnClickListener() {
@@ -33,14 +34,109 @@ public class MainActivity extends AppCompatActivity {
                 // Investigar la función para generar números aleatorios.
                 // Generar un número aleatorio del 1 al 9.
                 // Cargar la i-esima imagen de forma aleatoria.
+                int int_random = rand.nextInt(10)+1;
 
-                if (cancelPotentialWork(R.drawable.forest_restoration_map, imageViewBitmap)) {
-                    Log.i("onOptiomsItemSelected", "Creando objeto tarea asíncrona");
-                    final BitmapWorkerTask task = new BitmapWorkerTask(imageViewBitmap,
-                            getResources(), imageViewBitmap.getWidth(), imageViewBitmap.getHeight());
-                    final AsyncDrawable asyncDrawable =  new AsyncDrawable(getResources(), null, task);
-                    imageViewBitmap.setImageDrawable(asyncDrawable);
-                    task.execute(R.drawable.forest_restoration_map);
+                switch (int_random){
+                    case 1:
+                        if (cancelPotentialWork(R.drawable.imag_1, imageViewBitmap)) {
+                            Log.i("onOptiomsItemSelected", "Creando objeto tarea asíncrona");
+                            final BitmapWorkerTask task = new BitmapWorkerTask(imageViewBitmap,
+                                    getResources(), imageViewBitmap.getWidth(), imageViewBitmap.getHeight());
+                            final AsyncDrawable asyncDrawable =  new AsyncDrawable(getResources(), null, task);
+                            imageViewBitmap.setImageDrawable(asyncDrawable);
+                            task.execute(R.drawable.imag_1);
+                        }
+                        break;
+                    case 2:
+                        if (cancelPotentialWork(R.drawable.imag_2, imageViewBitmap)) {
+                            Log.i("onOptiomsItemSelected", "Creando objeto tarea asíncrona");
+                            final BitmapWorkerTask task = new BitmapWorkerTask(imageViewBitmap,
+                                    getResources(), imageViewBitmap.getWidth(), imageViewBitmap.getHeight());
+                            final AsyncDrawable asyncDrawable =  new AsyncDrawable(getResources(), null, task);
+                            imageViewBitmap.setImageDrawable(asyncDrawable);
+                            task.execute(R.drawable.imag_2);
+                        }
+                        break;
+                    case 3:
+                        if (cancelPotentialWork(R.drawable.imag_3, imageViewBitmap)) {
+                            Log.i("onOptiomsItemSelected", "Creando objeto tarea asíncrona");
+                            final BitmapWorkerTask task = new BitmapWorkerTask(imageViewBitmap,
+                                    getResources(), imageViewBitmap.getWidth(), imageViewBitmap.getHeight());
+                            final AsyncDrawable asyncDrawable =  new AsyncDrawable(getResources(), null, task);
+                            imageViewBitmap.setImageDrawable(asyncDrawable);
+                            task.execute(R.drawable.imag_3);
+                        }
+                        break;
+                    case 4:
+                        if (cancelPotentialWork(R.drawable.imag_4, imageViewBitmap)) {
+                            Log.i("onOptiomsItemSelected", "Creando objeto tarea asíncrona");
+                            final BitmapWorkerTask task = new BitmapWorkerTask(imageViewBitmap,
+                                    getResources(), imageViewBitmap.getWidth(), imageViewBitmap.getHeight());
+                            final AsyncDrawable asyncDrawable =  new AsyncDrawable(getResources(), null, task);
+                            imageViewBitmap.setImageDrawable(asyncDrawable);
+                            task.execute(R.drawable.imag_4);
+                        }
+                        break;
+                    case 5:
+                        if (cancelPotentialWork(R.drawable.imag_5, imageViewBitmap)) {
+                            Log.i("onOptiomsItemSelected", "Creando objeto tarea asíncrona");
+                            final BitmapWorkerTask task = new BitmapWorkerTask(imageViewBitmap,
+                                    getResources(), imageViewBitmap.getWidth(), imageViewBitmap.getHeight());
+                            final AsyncDrawable asyncDrawable =  new AsyncDrawable(getResources(), null, task);
+                            imageViewBitmap.setImageDrawable(asyncDrawable);
+                            task.execute(R.drawable.imag_5);
+                        }
+                        break;
+                    case 6:
+                        if (cancelPotentialWork(R.drawable.imag_6, imageViewBitmap)) {
+                            Log.i("onOptiomsItemSelected", "Creando objeto tarea asíncrona");
+                            final BitmapWorkerTask task = new BitmapWorkerTask(imageViewBitmap,
+                                    getResources(), imageViewBitmap.getWidth(), imageViewBitmap.getHeight());
+                            final AsyncDrawable asyncDrawable =  new AsyncDrawable(getResources(), null, task);
+                            imageViewBitmap.setImageDrawable(asyncDrawable);
+                            task.execute(R.drawable.imag_6);
+                        }
+                        break;
+                    case 7:
+                        if (cancelPotentialWork(R.drawable.imag_7, imageViewBitmap)) {
+                            Log.i("onOptiomsItemSelected", "Creando objeto tarea asíncrona");
+                            final BitmapWorkerTask task = new BitmapWorkerTask(imageViewBitmap,
+                                    getResources(), imageViewBitmap.getWidth(), imageViewBitmap.getHeight());
+                            final AsyncDrawable asyncDrawable =  new AsyncDrawable(getResources(), null, task);
+                            imageViewBitmap.setImageDrawable(asyncDrawable);
+                            task.execute(R.drawable.imag_7);
+                        }
+                        break;
+                    case 8:
+                        if (cancelPotentialWork(R.drawable.imag_8, imageViewBitmap)) {
+                            Log.i("onOptiomsItemSelected", "Creando objeto tarea asíncrona");
+                            final BitmapWorkerTask task = new BitmapWorkerTask(imageViewBitmap,
+                                    getResources(), imageViewBitmap.getWidth(), imageViewBitmap.getHeight());
+                            final AsyncDrawable asyncDrawable =  new AsyncDrawable(getResources(), null, task);
+                            imageViewBitmap.setImageDrawable(asyncDrawable);
+                            task.execute(R.drawable.imag_8);
+                        }
+                        break;
+                    case 9:
+                        if (cancelPotentialWork(R.drawable.imag_9, imageViewBitmap)) {
+                            Log.i("onOptiomsItemSelected", "Creando objeto tarea asíncrona");
+                            final BitmapWorkerTask task = new BitmapWorkerTask(imageViewBitmap,
+                                    getResources(), imageViewBitmap.getWidth(), imageViewBitmap.getHeight());
+                            final AsyncDrawable asyncDrawable =  new AsyncDrawable(getResources(), null, task);
+                            imageViewBitmap.setImageDrawable(asyncDrawable);
+                            task.execute(R.drawable.imag_9);
+                        }
+                        break;
+                    default:
+                        if (cancelPotentialWork(R.drawable.imag_10, imageViewBitmap)) {
+                            Log.i("onOptiomsItemSelected", "Creando objeto tarea asíncrona");
+                            final BitmapWorkerTask task = new BitmapWorkerTask(imageViewBitmap,
+                                    getResources(), imageViewBitmap.getWidth(), imageViewBitmap.getHeight());
+                            final AsyncDrawable asyncDrawable =  new AsyncDrawable(getResources(), null, task);
+                            imageViewBitmap.setImageDrawable(asyncDrawable);
+                            task.execute(R.drawable.imag_10);
+                        }
+                        break;
                 }
             }
         });
@@ -76,10 +172,46 @@ public class MainActivity extends AppCompatActivity {
 
         int itemId = item.getItemId();
         if (itemId == R.id.itemMenuLoadBitmap) {
+            int int_random = rand.nextInt(10)+1;
             Log.i("onOptiomsItemSelected", "Creando objeto tarea asíncrona");
-            BitmapWorkerTask task = new BitmapWorkerTask(imageViewBitmap, getResources(),
-                    imageViewBitmap.getWidth(), imageViewBitmap.getHeight());
-            task.execute(R.drawable.forest_restoration_map);
+            final BitmapWorkerTask task = new BitmapWorkerTask(imageViewBitmap,
+                    getResources(),imageViewBitmap.getWidth(), imageViewBitmap.getHeight());
+            final AsyncDrawable asyncDrawable =  new AsyncDrawable(getResources(), null, task);
+            imageViewBitmap.setImageDrawable(asyncDrawable);
+            switch (int_random){
+                case 1:
+                    task.execute(R.drawable.imag_1);
+                    break;
+                case 2:
+                    task.execute(R.drawable.imag_2);
+                    break;
+
+                case 3:
+                    task.execute(R.drawable.imag_3);
+                    break;
+                case 4:
+                    task.execute(R.drawable.imag_4);
+                    break;
+                case 5:
+                    task.execute(R.drawable.imag_5);
+                    break;
+                case 6:
+                    task.execute(R.drawable.imag_6);
+                    break;
+                case 7:
+                    task.execute(R.drawable.imag_7);
+                    break;
+                case 8:
+                    task.execute(R.drawable.imag_8);
+                    break;
+                case 9:
+                    task.execute(R.drawable.imag_9);
+                    break;
+                default:
+                    task.execute(R.drawable.imag_10);
+                    break;
+            }
+
             return true;
         }
         else if (itemId == R.id.itemMenuClearBitmap) {
